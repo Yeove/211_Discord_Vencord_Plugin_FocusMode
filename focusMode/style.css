@@ -1,0 +1,9 @@
+/* Only loaded while focus mode is on */
+nav[class*="guilds_"], /* server list */
+:is([class^="sidebar_"], [class*=" sidebar_"]):has([class*="sidebarList_"], [class*="panels_"]), /* channel / DM list */
+[class*="membersWrap_"], /* member list */
+[class*="profilePanel_"], /* profile panel in DMs */
+[class*="nowPlayingColumn_"], /* Active Now on the Friends page */
+:has(> main[class*="chatContent_"]) > :is(aside, div:has(> aside)) /* anything else docked beside the messages */ {
+    display: none !important;
+}
